@@ -124,6 +124,7 @@
     }
 
     let changeTemp = delta => {
+      if (!isOn) return
       const display = document.getElementById('temp-display')
       const newTemp = temperature + delta
 
