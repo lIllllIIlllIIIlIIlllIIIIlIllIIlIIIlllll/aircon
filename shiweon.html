@@ -124,6 +124,7 @@
     }
 
     let changeTemp = delta => {
+      if (!isOn) return
       const display = document.getElementById('temp-display')
       const newTemp = temperature + delta
 
@@ -131,7 +132,6 @@
         temperature = newTemp
         display.textContent = `${temperature}°C`
       }
-      if (isOn == false) return
     }
   </script>
 </body>
